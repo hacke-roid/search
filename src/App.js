@@ -1,26 +1,34 @@
 import { useState } from "react";
 import searchImages from "./api";
+import ButtonClick from "./components/ButtonClick";
 import ImageList from "./components/ImageList";
 import SearchBar from "./components/SearchBar";
 
 
+function App() {
+  const [images, setImages] = useState([]);
 
-function App(){
+  const handleSubmit = async (term) => {
+    const results = await searchImages(term);
+    console.log(results);
+    setImages(results);
+  };
 
-    const [images, setImages] = useState([]);
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log('./components/ButtonClick.js')
+  };
 
-    const handleSubmit = async (term) => {
-        const results = await searchImages(term);
-        console.log(results);
-        setImages(results);
-     }
-
-    return(
-        <div>
-            <SearchBar onSubmit={handleSubmit}/>
-            <ImageList images={images}/>
-        </div>
-    );
+  return (
+    <div>
+      <SearchBar onSubmit={handleSubmit} />
+      <ImageList images={images} />
+        <button onClick={handleClick}>
+            Home
+        </button>
+    </div>
+    
+  );
 }
 
 export default App;
