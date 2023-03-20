@@ -1,9 +1,7 @@
 import { useState } from "react";
 import searchImages from "./api";
-import ButtonClick from "./components/ButtonClick";
 import ImageList from "./components/ImageList";
 import SearchBar from "./components/SearchBar";
-
 
 function App() {
   const [images, setImages] = useState([]);
@@ -14,20 +12,11 @@ function App() {
     setImages(results);
   };
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    console.log('./components/ButtonClick.js')
-  };
-
   return (
     <div>
       <SearchBar onSubmit={handleSubmit} />
       <ImageList images={images} />
-        <button onClick={handleClick}>
-            Home
-        </button>
     </div>
-    
   );
 }
 
