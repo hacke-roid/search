@@ -1,10 +1,21 @@
 .search-bar {
     border: 1px solid lightgray;
-    border-radius:  5px;
-    padding: 10px;
+    border-radius:  20px;
+    padding: 20px;
+    background-color: rgb(233, 235, 141);
 }
 
 .search-bar form {
     display: flex;
     flex-direction: column;
+}
+
+input {
+    width: auto;
+    height: 30px;
+    font-size: large;
+}
+
+.back-ground {
+    background-color: beige;
 }

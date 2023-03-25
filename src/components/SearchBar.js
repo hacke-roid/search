@@ -16,10 +16,10 @@ function SearchBar({ onSubmit }) {
   return (
     <div className="search-bar">
       <form onSubmit={onFormSubmit}>
-        <label>Search</label>
+        <label style={{marginTop: '5px'}}>Search</label>
         <input value={term} onChange={handleChange} />
         <div>
-          <button value={term}>
+          <button value={term} style={{marginTop: '5px'}}>
             <a>Submit</a>
           </button>
         </div>
