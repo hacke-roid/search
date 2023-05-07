@@ -7,6 +7,8 @@ const searchImages = async (term) => {
         },
         params: {
             query: term,
+            page: 1,
+            per_page: 30,
         },
 
         
