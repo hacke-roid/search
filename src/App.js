@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="back-ground">
       <SearchBar onSubmit={handleSubmit}/>
+      <h2 style={{ marginLeft : '30px' }}>Image List</h2>
       <ImageList images={images}/>
     </div>
   );
